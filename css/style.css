@@ -1,0 +1,41 @@
+/* Style the header */
+.header {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  body, html {
+    height: 100%;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url("/css/images/test.gif");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
