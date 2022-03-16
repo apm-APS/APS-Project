@@ -22,13 +22,26 @@
     padding-top: 102px;
   }
 
+
+  /* PARALLAX EFFECT INDEX PAGE  */
   body, html {
     height: 100%;
   }
   
-  .parallax {
+
+  .bg-1, .bg-2, .bg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .bg-1 {
     /* The image used */
-    background-image: url("/css/images/test.gif");
+    background-image: url("/css/images/linea1.jpg");
   
     /* Full height */
     height: 100%;
@@ -38,4 +51,39 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .bg-2 {
+    background-image: url("/css/images/sillas.jpg");
+  
+    height: 100%;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
   }
