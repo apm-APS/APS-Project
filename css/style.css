@@ -41,7 +41,7 @@
 
   .bg-1 {
     /* The image used */
-    background-image: url("/css/images/linea1.jpg");
+    background-image: url("images/linea1.jpg");
   
     /* Full height */
     height: 100%;
@@ -54,7 +54,7 @@
   }
 
   .bg-2 {
-    background-image: url("/css/images/sillas.jpg");
+    background-image: url("images/sillas.jpg");
   
     height: 100%;
   
