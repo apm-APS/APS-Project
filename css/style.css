@@ -67,7 +67,7 @@
   .caption {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 30%;
     width: 100%;
     text-align: center;
     color: #000;
@@ -86,4 +86,9 @@
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     color: #111;
+  }
+  .bg-1 h1{
+    color: #fff;
+    font: 48px "Roboto", sans-serif;
+    font-weight: 700;
   }
