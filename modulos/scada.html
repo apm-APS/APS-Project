@@ -92,15 +92,48 @@
       <div class="container">
         <h2>Sistema de Supervisión SCADA </h2>
         <p>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
-          Example inner page template <br>
+          El término SCADA aplica para dos formas de control supervisorio. Primero como Sistema donde 
+	  se diseña un sistema que se implementa en superficies geográficas amplias utilizando 
+	  telemetría, adquisición de datos remotos, RTUs, MTUs, etc. Segundo como Software para hacer 
+	  control supervisorio basado en PC.
         </p>
+	<p>
+	  Para este proyecto se diseñará un Software SCADA ya que se busca supervisar la fabricación 
+	  de sillas en un espacio pequeño por lo que no es necesario el diseño de este como Sistema. 
+	  Para validar el funcionamiento del Software se hizo una simulación de la HMI que se 
+	  utilizaría para supervisar el proceso de pintura en la celda robotizada. Para esto se 
+	  utilizó la herramienta ScreenMaker del complemento FlexPendant de RobotStudio. Para lo que 
+	  no son celdas robotizadas, se utilizó Ignition para desarrollar la HMI, supervisando la 
+	  conexión entre RSLinx Classic (Studio 5000) y Siemens NX.
+	</p>
+	<h4>
+	  Diseño de HMI
+	</h4>
+	<img src="../assets/Pantalla1.PNG" class="img-fluid" alt="">
+	<img src="../assets/Pantalla2.PNG" class="img-fluid" alt="">
+	<p>
+	  En la pantalla principal se le avisa al operario el estado de la silla que se está pintando, 
+	  si es necesario moverla, si es necesario recargar el tanque de pintura, la producción diaria 
+	  de sillas y si se cumplió la meta de producción. Además de contar con botones para iniciar 
+	  la producción e indicar si se puede continuar con esta después de las correcciones que se 
+	  necesiten hacer y hay un botón para acceder a la segunda pantalla. En la segunda pantalla 
+	  se ve el estado del robot, en este caso, la posición de las articulaciones del robot. Para 
+	  lograr esto se necesita conectar el controlador del robot con el software de supervisión. 
+	</p>
+	<h4>
+	  Validación
+	</h4>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/_fy2I3khid8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<p>
+	  RobotStudio permite conectar el FlexPendant con el controlador de la estación de la celda 
+	  robótica. De esta manera se puede tener un HMI hecho con FlexPendant para supervisar y 
+	  controlar algunos elementos del robot, como los son los ángulos de sus 6 ejes, el nivel de 
+	  pintura, los números de ciclos que ha realizado, así como indicar si el robot ya terminó 
+	  su ciclo y está listo para el siguiente ciclo, o si ya es necesario girar la silla para 
+	  que la pinte por detrás; de esta manera se cuenta también con botones para indicar que ya 
+	  se puso la silla (Posición 1) o si ya se giró la silla (Posición 2) para que el robot siga 
+	  con su respectivo proceso. También indica si hay colisiones.
+	</p>
       </div>
     </section>
 
