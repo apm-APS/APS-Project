@@ -57,7 +57,7 @@
               <li><a href="celda.html">Celda de Manufactura Robotizada</a></li>
               <li><a href="digitalf.html">Digital Factory</a></li>
               <li><a href="controladores.html">Controladores Industriales (PLC)</a></li>
-              <li><a href="actuadores.html">Actuadores en Automatización</a></li>
+              <li><a href="actuadores.html">Comunicaciones Industriales</a></li>
               <li><a href="scada.html">Sistema de Supervisión SCADA</a></li>
               <li><a href="economica.html">Evaluación Económica del Proyecto</a></li>
             </ul>
@@ -95,12 +95,53 @@
           Los procesos en los que se van a usar celdas robotizadas son soldadura,
           limpieza de soldadura y pintura. La idea es que las 3 sean celdas basadas en robots.
           Esto con el fin de lograr que se reduzcan los tiempos de proceso, que haya un mejor flujo de materiales y
-          bajar el riesgo de accidentes.
+          bajar el riesgo de accidentes. Para lograr un diseño óptimo hay que entender el proceso que se va a realizar 
+	  en la celda robotizada, determinar las acciones puntuales que se van a llevar a cabo.
         </p>
+	<p>
+	  Para el diseño de la celda robotizada de pintura se definió que esta tendría estos elementos:
+	</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>Robor de 6 DOF</li>
+              <li><i class="ri-check-double-line"></i> Herramienta de pintura para el robot</li>
+              <li><i class="ri-check-double-line"></i> Bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Controlador para el robot</li>
+              <li><i class="ri-check-double-line"></i> Controlador para las bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Sensores de posición para las bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Elementos de seguridad</li>
+            </ul>
+	<p>
+	  Para el diseño de la celda de soldadura y limpieza se definieron estos elementos:
+	</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>Robor de 6 DOF</li>
+              <li><i class="ri-check-double-line"></i> Herramienta de soldadura para el robot</li>
+              <li><i class="ri-check-double-line"></i> Bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Controlador para el robot</li>
+              <li><i class="ri-check-double-line"></i> Controlador para las bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Sensores de posición para las bandas transportadoras</li>
+              <li><i class="ri-check-double-line"></i> Elementos de seguridad</li>
+              <li><i class="ri-check-double-line"></i> Base con soportes para ajustar las piezas</li>
+              <li><i class="ri-check-double-line"></i> Acelerómetro</li>
+            </ul>
+	<p>
+	  Los elementos de seguridad que se identificaron que se necesitan para cuidar a los operarios y a las mismas máquinas son los siguientes:
+	</p>
+    <div style="left: 0px; top: 0px; width: 1000px; height: 625px; overflow: auto; margin: auto;">
+      <iframe src="https://docs.google.com/spreadsheets/d/1Kr7fBx2grk_B4T2m0_CtPJ3vtVwTViZ2/edit?usp=sharing&ouid=117450788134850213298&rtpof=true&sd=true;single=true&amp;widget=true&amp;headers=false" style="display: block; width: 100%; height: 100%;"></iframe>
+    </div>
+	<p>
+	  Para simular la celda robotizada para pintura se usó RobotStudio. Aquí se pueden crear elementos como robots, 
+	  sensores, controladores, cuerpos rígidos y objetos que interactúan con el robot. Además se pueden definir las 
+	  rutas que seguirá el robot y el software las convierte a código RAPID. En nuestro caso se hizo la secuencia de 
+	  control para que el robot pinte una silla, donde se incluye el giro de la silla para poder pintarla por ambos lados, 
+	  bandas transportadores y botones que reemplazan ciertas acciones del operario. El funcionamiento de la celda es el siguiente:
+	</p>
       </div>
     </section>
-
+	
     
+
 
   </main><!-- End #main -->
 
