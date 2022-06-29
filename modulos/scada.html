@@ -99,15 +99,18 @@
         </p>
 	<p>
 	  Para este proyecto se diseñará un Software SCADA ya que se busca supervisar la fabricación 
-	  de sillas en un espacio pequeño por lo que no es necesario el diseño de este como Sistema. 
-	  Para validar el funcionamiento del Software se hizo una simulación de la HMI que se 
-	  utilizaría para supervisar el proceso de pintura en la celda robotizada. Para esto se 
-	  utilizó la herramienta ScreenMaker del complemento FlexPendant de RobotStudio. Para lo que 
+	  de sillas en un espacio pequeño por lo que no es necesario el diseño de este como Sistema.
+	  Se hicieron 2 HMI, una específica para la celda robotizada del proceso de pintura y otra
+	  para la fábrica digital. El diseño de ambas se hizo en Softwares distintos para explorar
+	  distintos métodos de diseñar una HMI. La de la celda robotizada se hizo utilizando el complemento
+	  FlexPendant de RobotStudio, el cual permite crear interfaces a través de ScreenMaker y se
+    validó su funcionamiento con una simulación de la HMI en conjunto con la celda robotizada. Para lo que 
 	  no son celdas robotizadas, se utilizó Ignition para desarrollar la HMI, supervisando la 
-	  conexión entre RSLinx Classic (Studio 5000) y Siemens NX.
+	  conexión entre RSLinx Classic (Studio 5000) y Siemens NX. Para validar su funcionamiento fue necesario
+    recurrir a las conexiones de comunicación hechas anteriormente para que los programas funcionaran en conjunto.
 	</p>
 	<h4>
-	  Diseño de HMI
+	  Diseño de HMI celda robotizada
 	</h4>
 	<img src="../assets/Pantalla1.png" class="img-fluid" alt="">
 	<img src="../assets/Pantalla2.png" class="img-fluid" alt="">
@@ -121,7 +124,7 @@
 	  lograr esto se necesita conectar el controlador del robot con el software de supervisión. 
 	</p>
 	<h4>
-	  Validación
+	  Validación celda robotizada
 	</h4>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/_fy2I3khid8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<p>
@@ -133,6 +136,28 @@
 	  que la pinte por detrás; de esta manera se cuenta también con botones para indicar que ya 
 	  se puso la silla (Posición 1) o si ya se giró la silla (Posición 2) para que el robot siga 
 	  con su respectivo proceso. También indica si hay colisiones.
+	</p>
+	<h4>
+	  Diseño de HMI fábrica digital
+	</h4>
+	<img src="../assets/scada.PNG" class="img-fluid" alt="">
+	<p>
+	  Para la interfaz de supervisión de la fábricca digital se tuvieron en cuenta las 3 máquinas que 
+    se simularon. Primero, la sierra para el corte de los perfiles, que como es un proceso prácticamente  
+    manual lo que se puede supervisar es la cantidad de perfiles cortados, esto se representa con una barra 
+    de progreso la cuál también tiene un cuadro de texto que indica el número de perfiles que se espera cortar 
+    en el día. Segundo, la troqueladora que al igual que la sierra es un proceso manual así que se presentan 
+    los mismos valores. Tercero, el brazo robótico en el que se presentan otras variables además del número de 
+    sillas pintadas, como el nivel de pintura (para saber cuándo se debe recargar). Las 3 tienen un indicador de 
+    estado para saber si están encendidas, apagadas o si fallaron. Además se presenta un indicador de producción 
+    para saber si la fabricación de sillas va a la "velocidad" esperada.
+	</p>
+	<h4>
+	  Validación fábrica digital
+	</h4>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/_fy2I3khid8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<p>
+	  Texto xd
 	</p>
       </div>
     </section>
